@@ -61,8 +61,7 @@ git --version
 shaws configure
 Provide your Access Key ID, Secret Access Key, and default region when prompted.
 2. Clone the Repository
-shgit clone https://github.com/kartikakade0427/Deploying-Two-EC2-Web-Servers-Behind-an-Application-Load-Balancer-Using-Terraform.git
-
+shgit clone https://github.com/shivaji67/Deploying-Two-EC2-Web-Servers-Behind-an-Application-Load-Balancer-Using-Terraform-AWS.git
 cd Deploying-Two-EC2-Web-Servers-Behind-an-Application-Load-Balancer-Using-Terraform
 3. Create terraform.tfvars
 shnano terraform.tfvars
