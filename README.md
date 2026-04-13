@@ -1,7 +1,7 @@
-Deploying Two EC2 Web Servers Behind an Application Load Balancer Using Terraform
-Highly Available AWS Infrastructure using Infrastructure as Code
+**Deploying Two EC2 Web Servers Behind an Application Load Balancer Using Terraform
+Highly Available AWS Infrastructure using Infrastructure as Code**
 
-📋 Project Overview
+**📋 Project Overview**
 This project demonstrates how to deploy a highly available web infrastructure on AWS using Terraform. It provisions a custom VPC, public subnets across multiple Availability Zones, EC2 instances running Nginx, and an Application Load Balancer (ALB) that distributes HTTP traffic between servers.
 Key highlights:
 
@@ -13,10 +13,10 @@ Secure networking using Security Groups
 High availability architecture with cross-AZ redundancy
 
 
-🛠 Technology Stack
+**🛠 Technology Stack**
 TechnologyPurposeDetailsTerraformInfrastructure as CodeProvision and manage all AWS resourcesAWS EC2Virtual ServersTwo t2.micro instances running NginxAWS VPCNetworkingCustom VPC with public subnets in multiple AZsAWS ALBLoad BalancerALB with HTTP health checksNginxWeb ServerLightweight HTTP server on each EC2 instanceLinuxOperating SystemAmazon Linux 2 AMI on EC2 instances
 
-🏗 Architecture
+**🏗 Architecture**
                       Internet
                           |
             Application Load Balancer (ALB)
@@ -31,7 +31,7 @@ TechnologyPurposeDetailsTerraformInfrastructure as CodeProvision and manage all 
         Route Table → Internet Gateway
                           |
                       Custom VPC
-Traffic flow:
+**Traffic flow:**
 
 Client sends HTTP request to the ALB DNS name.
 ALB distributes the request to one of the two EC2 instances via the Target Group.
@@ -39,7 +39,7 @@ Nginx on the EC2 instance serves the response ("server-1" or "server-2").
 ALB health checks continuously monitor instance health.
 
 
-📁 Project Structure
+**📁 Project Structure**
 .
 ├── main.tf
 ├── variables.tf
@@ -49,14 +49,14 @@ ALB health checks continuously monitor instance health.
 └── README.md
 FileDescriptionmain.tfCore infrastructure definitions (VPC, EC2, ALB, Security Groups)variables.tfVariable declarations and typesterraform.tfvarsVariable values (region, AMI, instance type)outputs.tfOutput values (ALB DNS name, instance IDs).gitignoreExcludes .tfstate, .tfvars, and sensitive files from GitREADME.mdProject documentation
 
-✅ Prerequisites
+**✅ Prerequisites**
 Ensure the following tools are installed before proceeding: Terraform v1.0+, AWS CLI v2.x, and Git.
 Verify installations:
 shterraform --version
 aws --version
 git --version
 
-🚀 Installation & Setup
+**🚀 Installation & Setup**
 1. Configure AWS Credentials
 shaws configure
 Provide your Access Key ID, Secret Access Key, and default region when prompted.
